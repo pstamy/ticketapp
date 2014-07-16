@@ -1,0 +1,17 @@
+.bundle
+doc/
+.yardoc
+db/*.sqlite3
+db/schema.rb
+config/database.yml
+config/s3.yml
+config/application.yml
+log/*.log
+tmp/
+uploads/
+.sass-cache/
+public/system/
+
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
