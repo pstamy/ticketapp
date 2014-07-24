@@ -12,3 +12,23 @@ Project.create([
     { name: 'Crop Budget', description: 'Crop Budgets' },
     { name: 'Main Website', description: 'Main Company Website' }
 ])
+
+IssueStatus.create([
+    { name: 'New' },
+    { name: 'In Progress' },
+    { name: 'On Hold' },
+    { name: 'Fixed' },
+    { name: 'Will Not Fix' }
+])
+
+IssueType.create([
+    { name: 'Bug' },
+    { name: 'Feature' },
+    { name: 'Enhancement' }
+])
+
+User.create([
+    { name: 'Bryce' },
+    { name: 'Josh' },
+    { name: 'Paul' }
+])
