@@ -16,12 +16,12 @@
     <%= f.select :user_id, User.all.collect { |u| [ u.name, u.id ] }, {:include_blank => true} %>
   </div>
   <div class="field">
-    <%= f.label :issue_type_id %><br>
-    <%= f.number_field :issue_type_id %>
+    <label>Type</label><br>
+    <%= f.select :issue_type_id, IssueType.all.collect { |it| [ it.name, it.id ] }, {:include_blank => true} %>
   </div>
   <div class="field">
-    <%= f.label :issue_status_id %><br>
-    <%= f.number_field :issue_status_id %>
+    <label>Status</label><br>
+    <%= f.select :issue_status_id, IssueStatus.all.collect { |is| [ is.name, is.id ] }, {:include_blank => true} %>
   </div>
   <div class="field">
     <label>Project</label><br>
