@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :issuestatuses
+
+  resources :issuetypes
+
   resources :users
 
   resources :projects
