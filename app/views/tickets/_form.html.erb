@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <label>User</label><br>
+    <%= f.select :user_id, User.all.collect { |u| [ u.name, u.id ] }, {:include_blank => true} %>
   </div>
   <div class="field">
     <%= f.label :issue_type_id %><br>
