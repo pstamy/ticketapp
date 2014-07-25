@@ -1,0 +1,23 @@
+<h1>Listing issuestatuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @issuestatuses.each do |issuestatus| %>
+      <tr>
+        <td><%= link_to 'Show', issuestatus %></td>
+        <td><%= link_to 'Edit', edit_issuestatus_path(issuestatus) %></td>
+        <td><%= link_to 'Destroy', issuestatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Issuestatus', new_issuestatus_path %>

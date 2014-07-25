@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div id="banner">
+    <%= @page_title || "Ticket Tracker" %>
+  </div>
+  <div id="menu">
+    <%= link_to 'Projects',projects_path %></br>
+    <%= link_to 'Tickets', tickets_path %></br>
+    <%= link_to 'Users', users_path %></br>
+  </div>
+  <%= yield %>
 
 </body>
 </html>

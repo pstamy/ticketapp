@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ #banner {
+	background: blue;
+	padding: 5px;
+	font: 30px/30px "Times New Roman", serif;
+	color: white;
+	text-align: center;
+	}
+
+#menu {
+	float: left;
+	padding: 1em 1em 500px 1em;
+	font: 15px/15px "Times New Roman", serif;
+	width: 5em;
+	lenght: 200em;
+	background: blue;
+	color: white;
+	}

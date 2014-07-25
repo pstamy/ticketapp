@@ -1,0 +1,17 @@
+<%= form_for(@issuestatus) do |f| %>
+  <% if @issuestatus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@issuestatus.errors.count, "error") %> prohibited this issuestatus from being saved:</h2>
+
+      <ul>
+      <% @issuestatus.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
