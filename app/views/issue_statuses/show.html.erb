@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_issuestatus_path(@issuestatus) %> |
-<%= link_to 'Back', issuestatuses_path %>
+<p>
+  <strong>Name:</strong>
+  <%= @issue_status.name %>
+</p>
+
+<%= link_to 'Edit', edit_issues_tatus_path(@issuestatus) %> |
+<%= link_to 'Back', issue_statuses_path %>

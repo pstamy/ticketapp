@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_issuetype_path(@issuetype) %> |
-<%= link_to 'Back', issuetypes_path %>
+<p>
+  <strong>Name:</strong>
+  <%= @issue_type.name %>
+</p>
+
+<%= link_to 'Edit', edit_issue_type_path(@issuetype) %> |
+<%= link_to 'Back', issue_types_path %>

@@ -1,4 +1,4 @@
-<h1>Listing issuestatuses</h1>
+<h1>Listing issue_statuses</h1>
 
 <table>
   <thead>
@@ -8,11 +8,12 @@
   </thead>
 
   <tbody>
-    <% @issuestatuses.each do |issuestatus| %>
+    <% @issue_statuses.each do |issue_status| %>
       <tr>
-        <td><%= link_to 'Show', issuestatus %></td>
-        <td><%= link_to 'Edit', edit_issuestatus_path(issuestatus) %></td>
-        <td><%= link_to 'Destroy', issuestatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= issue_status.name %></td>
+        <td><%= link_to 'Show', issue_status %></td>
+        <td><%= link_to 'Edit', edit_issue_status_path(issue_status) %></td>
+        <td><%= link_to 'Destroy', issue_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -20,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New Issuestatus', new_issuestatus_path %>
+<%= link_to 'New Issuestatus', new_issue+status_path %>

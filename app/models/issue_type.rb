@@ -1,3 +1,3 @@
 class IssueType < ActiveRecord::Base
-  belongs_to :ticket
+  has_many :tickets
 end

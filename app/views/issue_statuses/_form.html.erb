@@ -1,16 +1,19 @@
-<%= form_for(@issuestatus) do |f| %>
-  <% if @issuestatus.errors.any? %>
+<%= form_for(@issue_status) do |f| %>
+  <% if @issue_status.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@issuestatus.errors.count, "error") %> prohibited this issuestatus from being saved:</h2>
+      <h2><%= pluralize(@issue_status.errors.count, "error") %> prohibited this issue_status from being saved:</h2>
 
       <ul>
-      <% @issuestatus.errors.full_messages.each do |message| %>
+      <% @issue_status.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
