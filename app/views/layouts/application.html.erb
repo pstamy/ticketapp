@@ -7,9 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <div id="banner">
     <%= @page_title || "Ticket Tracker" %>
-  </div>
+    </div>
   <div id="menu">
     <%= link_to 'Projects',projects_path %></br>
     <%= link_to 'Tickets', tickets_path %></br>
@@ -18,4 +19,6 @@
   <%= yield %>
 
 </body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 </html>

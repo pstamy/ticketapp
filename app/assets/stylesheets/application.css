@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+ 
  #banner {
 	background: blue;
 	padding: 5px;
