@@ -1,5 +1,5 @@
 <%= form_for(@issue_type) do |f| %>
-  <% if @issuetype.errors.any? %>
+  <% if @issue_type.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@issue_type.errors.count, "error") %> prohibited this issue_type from being saved:</h2>
 

@@ -14,22 +14,16 @@
  *= require_self
  */
 
- @import "bootstrap";
+ $body-bg: white;
+ $navbar-default-bg: green;
+ $navbar-default-link-color:yellow;
+ $text-color: green;
+ $table-bg: whitesmoke;
+ $table-cell-padding: 8px;
  
- #banner {
-	background: blue;
-	padding: 5px;
-	font: 30px/30px "Times New Roman", serif;
-	color: white;
-	text-align: center;
-	}
+ @import "bootstrap";
 
-#menu {
-	float: left;
-	padding: 1em 1em 500px 1em;
-	font: 15px/15px "Times New Roman", serif;
-	width: 5em;
-	lenght: 200em;
-	background: blue;
-	color: white;
-	}
+ .table{
+border:1px solid black;
+border-collapse:collapse
+}

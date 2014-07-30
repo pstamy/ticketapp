@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <label>User</label><br>
-    <%= f.select :user_id, User.all.collect { |u| [ u.name, u.id ] }, {:include_blank => true} %>
+    <%= f.select :user_id, User.all.collect { |u| [ u.email, u.id ] }, {:include_blank => true} %>
   </div>
   <div class="actions">
     <%= f.submit %>
