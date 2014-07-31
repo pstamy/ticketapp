@@ -12,7 +12,6 @@
     <% @issue_statuses.each do |issue_status| %>
       <tr>
         <td><%= issue_status.name %></td>
-        <td><%= link_to 'Show', issue_status %></td>
         <td><%= link_to 'Edit', edit_issue_status_path(issue_status) %></td>
         <td><%= link_to 'Destroy', issue_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

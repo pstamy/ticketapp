@@ -28,7 +28,7 @@ class IssueTypesController < ApplicationController
 
     respond_to do |format|
       if @issue_type.save
-        format.html { redirect_to @issue_type, notice: 'IssueType was successfully created.' }
+        format.html { redirect_to issue_types_url, notice: 'IssueType was successfully created.' }
         format.json { render :show, status: :created, location: @issue_type }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class IssueTypesController < ApplicationController
   def update
     respond_to do |format|
       if @issue_type.update(issue_type_params)
-        format.html { redirect_to @issue_type, notice: 'IssueType was successfully updated.' }
+        format.html { redirect_to issue_types_url, notice: 'IssueType was successfully updated.' }
         format.json { render :show, status: :ok, location: @issue_type }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class IssueTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_type_params
-      params[:issue_type]
+       params.require(:issue_type).permit(:name)
     end
 end

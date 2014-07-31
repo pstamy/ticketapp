@@ -28,7 +28,7 @@ class IssueStatusesController < ApplicationController
 
     respond_to do |format|
       if @issue_status.save
-        format.html { redirect_to @issue_status, notice: 'IssueStatus was successfully created.' }
+        format.html { redirect_to issue_statuses_url, notice: 'Issue Status was successfully created.' }
         format.json { render :show, status: :created, location: @issue_status }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class IssueStatusesController < ApplicationController
   def update
     respond_to do |format|
       if @issue_status.update(issue_status_params)
-        format.html { redirect_to @issue_status, notice: 'IssueStatus was successfully updated.' }
+        format.html { redirect_to issue_statuses_url, notice: 'Issue Status was successfully updated.' }
         format.json { render :show, status: :ok, location: @issue_status }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class IssueStatusesController < ApplicationController
   def destroy
     @issue_status.destroy
     respond_to do |format|
-      format.html { redirect_to issue_statuses_url, notice: 'IssueStatus was successfully destroyed.' }
+      format.html { redirect_to issue_statuses_url, notice: 'Issue Status was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class IssueStatusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_status_params
-      params[:issue_status]
+      params.require(:issue_status).permit(:name)
     end
 end
