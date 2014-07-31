@@ -1,10 +1,15 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Ticketapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <div class="logout">
+    <% if user_signed_in? %>
+      <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% end %>
+  </div>
   <div class="navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -26,10 +31,6 @@
           <li><a href="projects">Projects</a></li>
           <li><a href="issue_types">Issue Types</a></li>
           <li><a href="issue_statuses">Statuses</a></li>
-          <li><a href="destroy_user_session_path">Sign Out</a></li>
-          <% if user_signed_in? %>
-            <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-          <% end %>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
